@@ -13,11 +13,16 @@ class ChatListViewController: UIViewController {
     
     @IBOutlet weak var chatListTableView: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         chatListTableView.delegate = self
         chatListTableView.dataSource = self
+        
+        navigationController?.navigationBar.barTintColor = .rgb(red: 39, green: 49, blue: 69)
+        navigationItem.title = "トーク"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
 }
@@ -38,12 +43,20 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(#function)
+        let storyboard = UIStoryboard.init(name: "ChatRoom", bundle: nil)
+        let chatRoomViewController = storyboard.instantiateViewController(identifier: "ChatRoomViewController")
+        navigationController?.pushViewController(chatRoomViewController, animated: true)
+        
+    }
+    
 }
 
 class ChatListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var partnerLabel: UILabel!
-    @IBOutlet weak var latestMssageLabel: UILabel!
+    @IBOutlet weak var latestMessageLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     

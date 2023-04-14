@@ -13,6 +13,11 @@
 		32A0168C29E896260073F30F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A0168A29E896260073F30F /* LaunchScreen.storyboard */; };
 		32A0169629E897EB0073F30F /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A0169529E897EB0073F30F /* ChatList.storyboard */; };
 		32A0169829E898040073F30F /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0169729E898040073F30F /* ChatListViewController.swift */; };
+		32A0169A29E927990073F30F /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0169929E927990073F30F /* ChatRoomViewController.swift */; };
+		32A0169C29E927A70073F30F /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A0169B29E927A70073F30F /* ChatRoom.storyboard */; };
+		32A0169F29E928920073F30F /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0169E29E928920073F30F /* UIColor-Extension.swift */; };
+		32A016A229E929EA0073F30F /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A016A129E929EA0073F30F /* ChatRoomTableViewCell.swift */; };
+		32A016A529E92A6D0073F30F /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A016A429E92A6D0073F30F /* ChatRoomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		32A0168D29E896260073F30F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32A0169529E897EB0073F30F /* ChatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
 		32A0169729E898040073F30F /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		32A0169929E927990073F30F /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		32A0169B29E927A70073F30F /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
+		32A0169E29E928920073F30F /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		32A016A129E929EA0073F30F /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
+		32A016A429E92A6D0073F30F /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		32A0167E29E896250073F30F /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				32A016A329E92A4B0073F30F /* Xibs */,
+				32A016A029E929BF0073F30F /* Views */,
+				32A0169D29E9285E0073F30F /* Extensions */,
 				32A0169429E897D10073F30F /* StoryBoards */,
 				32A0169329E897BE0073F30F /* Controllers */,
 				32A0167F29E896250073F30F /* AppDelegate.swift */,
@@ -71,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				32A0169729E898040073F30F /* ChatListViewController.swift */,
+				32A0169929E927990073F30F /* ChatRoomViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -79,8 +93,33 @@
 			isa = PBXGroup;
 			children = (
 				32A0169529E897EB0073F30F /* ChatList.storyboard */,
+				32A0169B29E927A70073F30F /* ChatRoom.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		32A0169D29E9285E0073F30F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32A0169E29E928920073F30F /* UIColor-Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32A016A029E929BF0073F30F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32A016A129E929EA0073F30F /* ChatRoomTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		32A016A329E92A4B0073F30F /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				32A016A429E92A6D0073F30F /* ChatRoomTableViewCell.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +180,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A016A529E92A6D0073F30F /* ChatRoomTableViewCell.xib in Resources */,
 				32A0169629E897EB0073F30F /* ChatList.storyboard in Resources */,
 				32A0168C29E896260073F30F /* LaunchScreen.storyboard in Resources */,
 				32A0168929E896260073F30F /* Assets.xcassets in Resources */,
+				32A0169C29E927A70073F30F /* ChatRoom.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,8 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				32A0169829E898040073F30F /* ChatListViewController.swift in Sources */,
+				32A0169F29E928920073F30F /* UIColor-Extension.swift in Sources */,
 				32A0168029E896250073F30F /* AppDelegate.swift in Sources */,
 				32A0168229E896250073F30F /* SceneDelegate.swift in Sources */,
+				32A016A229E929EA0073F30F /* ChatRoomTableViewCell.swift in Sources */,
+				32A0169A29E927990073F30F /* ChatRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
